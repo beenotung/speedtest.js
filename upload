@@ -1,4 +1,5 @@
 #!/bin/bash
 set -e
 set -o pipefail
-surge src speedtest.surge.sh
+cat src/index.js | grep -v '^#' > dist/index.js
+surge dist speedtest.surge.sh
