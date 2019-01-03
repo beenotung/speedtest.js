@@ -1,5 +1,5 @@
 {
-  "name": "speedtest",
+  "name": "speedtest.js",
   "version": "1.0.0",
   "keywords": [],
   "author": "Beeno Tung <aabbcc1241@yahoo.com.hk> (https://beeno-tung.surge.sh)",
@@ -37,11 +37,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/beenotung/speedtest.git"
+    "url": "git+https://github.com/beenotung/speedtest.js.git"
   },
   "bugs": {
-    "url": "https://github.com/beenotung/speedtest/issues"
+    "url": "https://github.com/beenotung/speedtest.js/issues"
   },
-  "homepage": "https://github.com/beenotung/speedtest#readme",
+  "homepage": "https://github.com/beenotung/speedtest.js#readme",
   "description": ""
 }
