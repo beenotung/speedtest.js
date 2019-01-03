@@ -1,7 +1,6 @@
 {
-  "name": "speed-test",
+  "name": "speedtest",
   "version": "1.0.0",
-  "description": "",
   "keywords": [],
   "author": "Beeno Tung <aabbcc1241@yahoo.com.hk> (https://beeno-tung.surge.sh)",
   "license": "BSD-2-Clause",
@@ -32,5 +31,9 @@
     "tslint-eslint-rules": "^5.4.0",
     "typescript": "^3.2.2"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "directories": {
+    "test": "test"
+  },
+  "description": ""
 }
