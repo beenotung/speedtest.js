@@ -3,4 +3,4 @@
 
 test the javascript execution speed, for web browser and node.js
 
-hosted on [https://speedtest.surge.sh/]
+hosted on [https://speedtest.surge.sh/](https://speedtest.surge.sh/)
