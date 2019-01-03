@@ -1,6 +1,6 @@
 {
   "name": "@beenotung/speedtest.js",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "keywords": [],
   "author": "Beeno Tung <aabbcc1241@yahoo.com.hk> (https://beeno-tung.surge.sh)",
   "license": "BSD-2-Clause",
@@ -8,13 +8,10 @@
   "bin": {
     "speedtest.js": "src/index.js"
   },
-  "scripts": {
-  },
-  "devDependencies": {
-  },
+  "scripts": {},
+  "devDependencies": {},
   "dependencies": {},
-  "directories": {
-  },
+  "directories": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/beenotung/speedtest.js.git"
