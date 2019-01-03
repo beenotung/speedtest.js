@@ -35,5 +35,13 @@
   "directories": {
     "test": "test"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beenotung/speedtest.git"
+  },
+  "bugs": {
+    "url": "https://github.com/beenotung/speedtest/issues"
+  },
+  "homepage": "https://github.com/beenotung/speedtest#readme",
   "description": ""
 }
