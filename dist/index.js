@@ -12,7 +12,7 @@ const end = (typeof document === 'undefined')
   ? () => process.exit(0)
   : () => document.close()
 ;
-const format = x => typeof x === 'number' ? Math.round(x * 100) / 100 : x.toString();
+const format = x => typeof x === 'number' ? (+x.toFixed(2)).toLocaleString() : x.toString();
 const logs = xs => log(xs.map(format).join(' '));
 
 function report() {
