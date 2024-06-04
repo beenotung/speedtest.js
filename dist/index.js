@@ -1,40 +1,41 @@
 #!/usr/bin/env node
-let n = 1;
-let iReport = 0;
-let t1 = 0;
-let t2 = 0;
-const start = Date.now();
+let iReport = 0
+let speed = 1
 
-const log = (typeof document === 'undefined')
-  ? s => process.stdout.write(s + '\n')
-  : s => document.body.innerHTML += s + '<br>' // document.write(s + '<br>')
-;
-const end = (typeof document === 'undefined')
-  ? () => process.exit(0)
-  : () => document.close()
-;
-const format = x => typeof x === 'number' ? (+x.toFixed(2)).toLocaleString() : x.toString();
-const logs = xs => log(xs.map(format).join(' '));
+const log =
+  typeof document === 'undefined'
+    ? s => process.stdout.write('\r' + s + '  ')
+    : s => (document.body.innerHTML = s)
+const end =
+  typeof document === 'undefined'
+    ? () => process.stdout.write('\nend\n')
+    : () => ((document.body.innerHTML += '<br>end'), document.close())
+const int = x => Math.round(x).toLocaleString()
+const float = x => x.toFixed(2)
 
-function report() {
-  iReport++;
-  const t = Date.now() - start;
-  const speed = n / t;
-  logs([iReport, speed]);
-  if (iReport > 30 || t > 1000 * 10) {
-    logs(['end']);
-    clearInterval(t1);
-    clearInterval(t2);
-    end();
+function tick() {
+  iReport++
+  const startTime = Date.now()
+  for (let i = 0; i < speed; i++) {}
+  const endTime = Date.now()
+  const time = (endTime - startTime) / 1000
+  let averageSpeed = speed / time
+  const closeEnough = Math.abs(time - 1) <= 0.02
+  if (time > 1) {
+    speed = speed * 0.5
+  } else if (time < 1) {
+    speed = speed * 1.5
+  }
+  averageSpeed = speed / time
+  log(
+    `[${iReport}] ${int(averageSpeed)} ops/sec (${int(speed)} ops / ${float(
+      time,
+    )} sec)`,
+  )
+  if (closeEnough) {
+    end()
+  } else {
+    setTimeout(tick)
   }
 }
-
-function loop() {
-  for (let i = n; i > 0; i--) {
-    n++;
-  }
-  report();
-}
-
-// t1 = setInterval(report);
-t2 = setInterval(loop);
+setTimeout(tick)
