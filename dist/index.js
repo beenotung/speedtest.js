@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 let n = 1;
 let iReport = 0;
 let t1 = 0;

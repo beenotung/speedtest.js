@@ -4,9 +4,9 @@
   "keywords": [],
   "author": "Beeno Tung <aabbcc1241@yahoo.com.hk> (https://beeno-tung.surge.sh)",
   "license": "BSD-2-Clause",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "bin": {
-    "speedtest.js": "src/index.js"
+    "speedtest.js": "dist/index.js"
   },
   "scripts": {},
   "devDependencies": {},
