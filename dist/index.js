@@ -15,9 +15,9 @@ const float = x => x.toFixed(2)
 
 function tick() {
   iReport++
-  const startTime = Date.now()
+  const startTime = performance.now()
   for (let i = 0; i < speed; i++) {}
-  const endTime = Date.now()
+  const endTime = performance.now()
   const time = (endTime - startTime) / 1000
   let averageSpeed = speed / time
   const closeEnough = Math.abs(time - 1) <= 0.02
