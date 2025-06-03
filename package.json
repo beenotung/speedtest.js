@@ -24,7 +24,9 @@
   "devDependencies": {
     "surge": "^0.24.6"
   },
-  "directories": {},
+  "files": [
+    "dist/index.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/beenotung/speedtest.js.git"
