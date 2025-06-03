@@ -1,10 +1,16 @@
 #!/usr/bin/env node
 let iReport = 0
 let speed = 1
+let lastLine = ''
 
 const log =
   typeof document === 'undefined'
-    ? s => process.stdout.write('\r' + s + '  ')
+    ? s => {
+        let space = lastLine.length - s.length
+        space = space > 0 ? ' '.repeat(space) : ''
+        process.stdout.write('\r' + s + space)
+        lastLine = s
+      }
     : s => (document.body.innerHTML = s)
 const end =
   typeof document === 'undefined'
