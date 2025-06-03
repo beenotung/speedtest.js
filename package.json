@@ -1,7 +1,16 @@
 {
   "name": "@beenotung/speedtest.js",
   "version": "0.0.6",
-  "keywords": [],
+  "keywords": [
+    "benchmark",
+    "performance",
+    "speed-test",
+    "ops",
+    "operations-per-second",
+    "performance-testing",
+    "cli",
+    "browser"
+  ],
   "author": "Beeno Tung <aabbcc1241@yahoo.com.hk> (https://beeno-tung.surge.sh)",
   "license": "BSD-2-Clause",
   "main": "dist/index.js",
@@ -24,5 +33,5 @@
     "url": "https://github.com/beenotung/speedtest.js/issues"
   },
   "homepage": "https://github.com/beenotung/speedtest.js#readme",
-  "description": ""
+  "description": "CLI benchmark tool to measure JavaScript runtime performance in operations per second"
 }
